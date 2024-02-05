@@ -76,7 +76,6 @@ public class Game {
 
     /** Run the game. */
     public static void main(String[] args) {
-
         new Game();
     }
 }

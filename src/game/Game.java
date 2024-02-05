@@ -41,6 +41,7 @@ public class Game {
         DynamicBody student = new DynamicBody(world, studentShape);
         student.setPosition(new Vec2(7,-9));
         student.addImage(new BodyImage("data/student.png", 4));
+        student.applyImpulse(new Vec2(-20, 80));
 
 
         //3. make a view to look into the game world

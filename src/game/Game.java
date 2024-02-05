@@ -65,7 +65,7 @@ public class Game {
         // size the frame to fit the world view
         frame.pack();
         // finally, make the frame visible
-        frame.setVisible(true);
+        frame.setVisible(true); 
 
         //optional: uncomment this to make a debugging view
        //  JFrame debugView = new DebugViewer(world, 500, 500);

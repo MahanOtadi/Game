@@ -5,28 +5,21 @@ import city.cs.engine.Shape;
 import org.jbox2d.common.Vec2;
 
 import javax.swing.JFrame;
-/**
- * A world with some bodies.
- */
+
 public class Game {
 
-    /** The World in which the bodies move and interact. */
     private GameWorld world;
-
-    /** A graphical display of the world (a specialised JPanel). */
     private GameView view;
 
-    /** Initialise a new Game. */
     public Game() {
 
         // make the world
-        GameWorld world = new GameWorld();
+        world = new GameWorld();
 
         // make a view
         view = new GameView(world, 1000, 800);
 
 
-        // world.addStepListener(new Tracker(view, world.getStudent()));
 
 
         // add the view to a frame (Java top level window)
@@ -52,7 +45,6 @@ public class Game {
 
     /** Run the game. */
     public static void main(String[] args) {
-
         new Game();
     }
 }

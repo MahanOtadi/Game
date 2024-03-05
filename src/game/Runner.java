@@ -7,7 +7,7 @@ public class Runner extends Walker {
     private static final Shape RunnerShape = new CircleShape(5);
 
     private static final BodyImage RunnerImage =
-            new BodyImage("data/runner.gif", 10f);
+            new BodyImage("data/runner.gif", 11f);
 
 
     public Runner(World world) {

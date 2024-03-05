@@ -10,6 +10,12 @@ public class GameWorld extends World {
     public GameWorld(){
         runner = new Runner(this);
         runner.setPosition(new Vec2(-18, -12));
+        runner.setGravityScale(0);
+//        runner.startWalking(10);
+    }
+
+    public Runner getRunner() {
+        return runner;
     }
 
 }

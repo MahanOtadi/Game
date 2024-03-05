@@ -19,7 +19,7 @@ public class Game {
         // make a view
         view = new GameView(world, 1000, 800);
 
-
+        world.addStepListener(new Tracker(view, world.getRunner()));
 
 
         // add the view to a frame (Java top level window)

@@ -12,6 +12,10 @@ public class GameWorld extends World {
         runner.setPosition(new Vec2(-18, -12));
         runner.setGravityScale(0);
 //        runner.startWalking(10);
+
+        Barrel barrel = new Barrel(this);
+        barrel.setPosition(new Vec2(-5,-10));
+
     }
 
     public Runner getRunner() {

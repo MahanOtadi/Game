@@ -1,9 +1,5 @@
 package game;
 
-import city.cs.engine.*;
-import city.cs.engine.Shape;
-import org.jbox2d.common.Vec2;
-
 import javax.swing.JFrame;
 
 public class Game {
@@ -18,6 +14,8 @@ public class Game {
 
         // make a view
         view = new GameView(world, 1000, 800);
+
+        RunnerController controller = new RunnerController(world.getRunner());
 
         world.addStepListener(new Tracker(view, world.getRunner()));
 
@@ -35,6 +33,7 @@ public class Game {
         frame.pack();
         // finally, make the frame visible
         frame.setVisible(true);
+        frame.addKeyListener(controller);
 
         // uncomment this to make a debugging view
         //JFrame debugView = new DebugViewer(world, 500, 500);

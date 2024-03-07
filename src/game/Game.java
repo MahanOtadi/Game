@@ -17,8 +17,7 @@ public class Game {
 
         RunnerController controller = new RunnerController(world.getRunner());
 
-        world.addStepListener(new Tracker(view, world.getRunner()));
-
+        world.addStepListener(new Tracker(world.getRunner(), world.getBarrels()));
 
         // add the view to a frame (Java top level window)
         final JFrame frame = new JFrame("Degree Quest");

@@ -33,4 +33,8 @@ public class GameWorld extends World {
     public Runner getRunner() {
         return runner;
     }
+
+    public Barrel[] getBarrels() {
+        return barrels;
+    }
 }

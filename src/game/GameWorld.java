@@ -22,7 +22,8 @@ public class GameWorld extends World {
 
         for (int i=0; i<8; i++){
             int barrelY = random.nextInt((-13 - (-16)) + 1) + (-16);
-            barrels[i] = new Barrel(this);
+            int barrelNo = random.nextInt(4);
+            barrels[i] = new Barrel(this, barrelNo);
             barrels[i].setPosition(new Vec2(barrelX - (25 * i), barrelY));
             barrels[i].setGravityScale(0);
             barrels[i].startWalking(-7);

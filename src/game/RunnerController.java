@@ -21,15 +21,14 @@ public class RunnerController implements KeyListener {
         int code = e.getKeyCode();
         // other key commands omitted
         if (code == KeyEvent.VK_UP){
-            runner.jump(13);
+            runner.setIsJumping(true);
             runner.removeAllImages();
-            runner.addImage( new BodyImage("data/StaticRunner.png", 11));
+            runner.addImage(new BodyImage("data/StaticRunner.png", 11));
+            runner.jump(13);
         }
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        runner.removeAllImages();
-        runner.addImage( new BodyImage("data/runner.gif", 11));
     }
 }

@@ -19,5 +19,9 @@ public class Tracker implements StepListener {
                 barrel.destroy();
             }
         }
+
+        if(runner.getIsJumping() == false){
+
+        }
     }
 }

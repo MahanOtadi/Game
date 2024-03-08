@@ -12,13 +12,17 @@ public class GameWorld extends World {
     private final int barrelX = 210;
     private Runner runner;
 
+    private Platform platform;
+
     public GameWorld(){
         runner = new Runner(this);
         runner.setPosition(new Vec2(-18, -13));
 
-        Shape platformShape = new BoxShape(0, 0);
-        StaticBody platform = new StaticBody(this, platformShape);
+        platform = new Platform(this);
         platform.setPosition(new Vec2(-18, -18));
+
+        StudentCollision collide = new StudentCollision(runner);
+        runner.addCollisionListener(collide);
 
         for (int i=0; i<8; i++){
             int barrelY = random.nextInt((-13 - (-16)) + 1) + (-16);

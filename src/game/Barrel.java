@@ -3,7 +3,8 @@ package game;
 import city.cs.engine.*;
 
 public class Barrel extends Walker {
-    private static final Shape BarrelShape = new CircleShape(1.5F);
+
+    private static final Shape BarrelShape = new BoxShape(1F, 1.7F);
 
     public Barrel(World world, int number) {
         super(world, BarrelShape);

@@ -21,7 +21,7 @@ public class GameWorld extends World {
         platform = new Platform(this);
         platform.setPosition(new Vec2(-18, -18));
 
-        StudentCollision collide = new StudentCollision(runner);
+        StudentCollision collide = new StudentCollision(this, runner);
         runner.addCollisionListener(collide);
 
         for (int i=0; i<8; i++){

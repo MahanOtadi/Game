@@ -3,12 +3,13 @@ package game;
 import city.cs.engine.BodyImage;
 import city.cs.engine.CollisionEvent;
 import city.cs.engine.CollisionListener;
-import city.cs.engine.StaticBody;
 
 public class StudentCollision implements CollisionListener {
 
+    private GameWorld world;
     private Runner runner;
-    public StudentCollision(Runner runner){
+    public StudentCollision(GameWorld world, Runner runner){
+        this.world = world;
         this.runner = runner;
     }
 
@@ -18,6 +19,12 @@ public class StudentCollision implements CollisionListener {
             runner.setIsJumping(false);
             runner.removeAllImages();
             runner.addImage(new BodyImage("data/runner.gif", 11));
+        }
+
+        if(e.getOtherBody() instanceof Barrel) {
+            runner.removeAllImages();
+            runner.addImage(new BodyImage("data/staticRunner.png", 11));
+            world.stop();
         }
     }
 }

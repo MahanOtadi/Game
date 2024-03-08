@@ -14,6 +14,11 @@ public class Tracker implements StepListener {
     public void preStep(StepEvent e) {}
     public void postStep(StepEvent e) {
         runner.setAngle(0);
+
+        if(runner.getPosition().x - 10 > barrels[barrels.length - 1].getPosition().x){
+            runner.startWalking(6);
+        }
+
         for(Barrel barrel : barrels) {
             if(barrel.getPosition().x < -50){
                 barrel.destroy();

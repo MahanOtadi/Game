@@ -9,7 +9,7 @@ public class GameWorld extends World {
 
     Random random = new Random();
     Barrel[] barrels = new Barrel[8];
-    private final int barrelX = 210;
+    private final int barrelX = 30;
     private Runner runner;
 
     private Platform platform;
@@ -28,7 +28,7 @@ public class GameWorld extends World {
             int barrelY = random.nextInt((-13 - (-16)) + 1) + (-16);
             int barrelNo = random.nextInt(4);
             barrels[i] = new Barrel(this, barrelNo);
-            barrels[i].setPosition(new Vec2(barrelX - (25 * i), barrelY));
+            barrels[i].setPosition(new Vec2(barrelX + (25 * i), barrelY));
             barrels[i].setGravityScale(0);
             barrels[i].startWalking(-7);
             barrels[i].setAngularVelocity(1);

@@ -24,6 +24,7 @@ public class StudentCollision implements CollisionListener {
         if(e.getOtherBody() instanceof Barrel) {
             runner.removeAllImages();
             runner.addImage(new BodyImage("data/staticRunner.png", 11));
+            runner.setIsGameOver(true);
             world.stop();
         }
     }

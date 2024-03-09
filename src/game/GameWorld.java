@@ -1,9 +1,9 @@
 package game;
 
 import city.cs.engine.*;
-import city.cs.engine.Shape;
 import org.jbox2d.common.Vec2;
 import java.util.Random;
+
 
 public class GameWorld extends World {
 
@@ -24,7 +24,7 @@ public class GameWorld extends World {
         StudentCollision collide = new StudentCollision(this, runner);
         runner.addCollisionListener(collide);
 
-        for (int i=0; i<8; i++){
+        for (int i=0; i<barrels.length; i++){
             int barrelY = random.nextInt((-13 - (-16)) + 1) + (-16);
             int barrelNo = random.nextInt(4);
             barrels[i] = new Barrel(this, barrelNo);
@@ -38,7 +38,6 @@ public class GameWorld extends World {
     public Runner getRunner() {
         return runner;
     }
-
     public Barrel[] getBarrels() {
         return barrels;
     }

@@ -11,7 +11,6 @@ public class Game {
 
         // make the world
         world = new GameWorld();
-
         // make a view
         view = new GameView(world, 1000, 800);
 

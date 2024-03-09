@@ -4,7 +4,6 @@ import city.cs.engine.*;
 import org.jbox2d.common.Vec2;
 import java.util.Random;
 
-
 public class GameWorld extends World {
 
     Random random = new Random();
